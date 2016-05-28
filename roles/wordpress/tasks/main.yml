@@ -1,0 +1,4 @@
+---
+- include: wordpress_pre.yml
+- include: wordpress_install.yml
+- include: wordpress_post.yml

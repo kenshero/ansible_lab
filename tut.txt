@@ -1,0 +1,18 @@
+playbook > role > task
+
+ansible-playbook -i inventories/wordpress wordpress.yml //cmd
+
+idempotent เช็คว่ามี environment อยู่แล้วไหม
+
+wordpress ansible_become_pass="ansibleclass" ansible_host=127.0.0.1 ansible_port=2222 ansible_user=ubuntu ansible_password=ansibleclass
+
+ansible_become_pass = password ของ sudo 
+
+------ task install -------
+# - name: Install php5
+#   apt: name=php5 state=present
+#   become: yes
+
+# - name: Install mysql
+#   apt: name=mysql-server state=present
+#   become: yes

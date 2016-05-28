@@ -1,0 +1,7 @@
+---
+  wordpress_mysql_database_name: wordpress
+  wordpress_server_locate: localhost
+  wordpress_mysql_root_user: root
+  wordpress_mysql_root_pass: mysql-server
+  wordpress_prefix: wp_
+  wordpress_backup_file: wordpress_backup

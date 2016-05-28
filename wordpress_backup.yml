@@ -1,0 +1,7 @@
+---
+- hosts: all
+  become: yes
+  roles:
+    - wordpress_backup
+  # vars_files:
+  #   - /vars/wordpress.yml

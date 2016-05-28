@@ -1,0 +1,24 @@
+---
+  wordpress_doc_root: /var/www/html
+  wordpress_root_path: "{{ wordpress_doc_root }}/wordpress"
+  wordpress_url: https://wordpress.org/latest.tar.gz
+  wordpress_packages:
+    - apache2
+    - php5
+    - mysql-server
+    - php5-mysql
+    - python-mysqldb
+  wordpress_mysql_database_name: wordpress
+  wordpress_server_locate: localhost
+  wordpress_mysql_root_user: root
+  wordpress_mysql_root_pass: mysql-server
+  wordpress_prefix: wp_
+
+  wordpress_auth_key: t$k.}S9NgI~Q^d|1Z/(;REzcAK0q;!&h*D>8V.VT9V]?HzGcy]{Zz~W;/Y}*)qVs
+  wordpress_auth_secure_auth_key: k$l,wh/r@@f<U8W.(*AeEyr&a#qzo{q/Pd$r!98Q*}P{z=~{Ew3#d[1.u2HIi17@
+  wordpress_logged_in_key: ^xGDfGCek=j<*9i~Q  )cw+:`{Zlux*0PX.{,rCw$*{zL,59[lSu(^`%^%-vVa;|
+  wordpress_nonce_key: 6+-=X+$b6|tEXS)0;)EBz?D2u?&o8eF,e<w,U!0,AR=,/{TBr<m-{(GJjMHf(!r]
+  wordpress_auth_salt: '[cU V[kEGA%Hye2A{lQihi6l6e(Hw6j1t/=RxQ(jRAh6N%}yRee1C:=|`^amN%]!'
+  wordpress_secure_auth_salt: 'lEU2F{4j@O_%/#)-B4~?l5NVP?_j!y$36N(ujVr+N5-n?R7ZD{pP>N7%[ulVngT?'
+  wordpress_logged_in_salt: ';+a(_J$y4[|vzmK~V(9G4Je:O?k~!lx!&U.fR=>BUO4qW.KYRM*)XyS[)q3%!BPu'
+  wordpress_nonce_salt: 'hY`S`40)j2r6Q <cObYL;XD_`<ohrPeuJmx#sU8D)fWp}gB-3HN= :7|~u0)%&cT'

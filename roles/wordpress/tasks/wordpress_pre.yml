@@ -1,0 +1,26 @@
+---
+- name: Set MySQL root password before installing
+  debconf:
+    name: mysql-server
+    question: "{{ item }}"
+    value: "{{wordpress_mysql_root_pass | quote}}"
+    vtype: password
+  with_items:
+    - mysql-server/root_password
+    - mysql-server/root_password_again
+
+- name: Install LAMP na
+  apt:
+    name: "{{ item }}"
+    state: present
+  with_items: "{{ wordpress_packages }}"
+
+- name: have wordpress
+  stat:
+    path: "{{ wordpress_root_path }}"
+  register: have_wordpress
+
+- name: "Delete index.html From {{wordpress_doc_root}} "
+  file:
+    path: "{{wordpress_doc_root}}/index.html"
+    state: absent
